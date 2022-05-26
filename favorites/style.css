@@ -12,11 +12,6 @@ body {
     height: 100%;
 }
 
-/* section {
-    height: 100vh;
-    width: 100%;
-} */
-
 h5 {
     font-family: 'Poppins';
     font-style: normal;
@@ -68,10 +63,10 @@ header {
     background: #400067;
 }
 
-header h1 {
+/* header h1 {
     color: #00FF75;
     margin-left: -325px;
-}
+} */
 
 header h2 {
     font-size: 16px;
@@ -103,11 +98,6 @@ header h2 {
 .undefined {
     margin-left: 15%;
     width: 15%;
-}
-
-main {
-    position: relative;
-    width: 100%;
 }
 
 .favorites {
@@ -161,7 +151,7 @@ hr {
     background: #4A0095;
 }
 
-footer {
+/* footer {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -261,4 +251,4 @@ img {
     justify-content: center;
     align-items: center;
     gap: 150px;
-}
+} */
