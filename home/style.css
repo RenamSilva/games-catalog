@@ -127,14 +127,12 @@ header h2 {
 /* baner do jogo em destaque */
 .baner{
     position: relative;
-    /* margin-left: 135px; */
-    margin-top: 30%; 
+    margin-top: 50%; 
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-left: -5%;
 
-    /* margin-left: 5%; */
-    /* margin-top: 640px; */
     
     
 } 
@@ -151,8 +149,8 @@ header h2 {
 }
 /* segundo jogo */
 .card2{
-    margin-left: 30%;
-    margin-top: 20%;
+    margin-left: -55%;
+    margin-top: 5%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -165,8 +163,8 @@ header h2 {
 }
 /* terceiro jogo */
 .card3{
-    margin-left: 30%;
-    margin-top:20%;
+    margin-left: -5%;
+    margin-top:-16%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -179,8 +177,8 @@ header h2 {
 }
 /* quarto jogo */
 .card4{
-    margin-left: 20%;
-    margin-top: 30%;
+    margin-left: 45%;
+    margin-top: -16%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -193,8 +191,8 @@ header h2 {
 }
 /* quinto jogo */
 .card5{
-    margin-left: 20%;
-    margin-top: 30%;
+    margin-left: -55%;
+    margin-top: 5%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -206,8 +204,8 @@ header h2 {
 }
 /* sexto jogo */
 .card6{
-    margin-left: 20%;
-    margin-top:30%;
+    margin-left: -5%;
+    margin-top:-16%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -219,8 +217,8 @@ header h2 {
 }
 /* setimo jogo */
 .card7{
-    margin-left: 20%;
-    margin-top: 30%;
+    margin-left: 45%;
+    margin-top: -16%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -232,8 +230,8 @@ header h2 {
 }
 /* oitavo jogo */
 .card8{
-    margin-left: 20%;
-    margin-top: 30%;
+    margin-left: -55%;
+    margin-top: 5%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -245,8 +243,8 @@ header h2 {
 }
 /* nono jogo */
 .card9{
-    margin-left: 20%;
-    margin-top:30%;
+    margin-left: -5%;
+    margin-top:-16%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -258,8 +256,8 @@ header h2 {
 }
 /* decimo jogo */
 .card10{
-    margin-left: 20%;
-    margin-top:30%;
+    margin-left: 45%;
+    margin-top:-16%;
     display: flex;
     align-items: center;
     flex-direction: column;

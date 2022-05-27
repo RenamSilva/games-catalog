@@ -1,46 +1,3 @@
-// let btn = document.querySelector("#btn");
-// let sideBar = document.querySelector(".sideBar");
-
-// btn.onclick = function() {
-//     sideBar.classList.toggle("active");
-// }
-// let open = true
-
-// document.querySelector('#btn').addEventListener('focusin', e => {
-//     open = !open;
-//     toggleMenu()
-// })
-
-// document.querySelector('#btn').addEventListener('focusout', e => {
-//     open = false;
-
-//     toggleMenu()
-// })
-
-// function toggleMenu(){
-//     if (open){
-//         document.querySelector('#menu_lateral').style.marginLeft = 0
-//         return
-//     }
-//     document.querySelector('#menu_lateral').style.marginLeft = 100
-// }
-
-
-
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
-// 		'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY'
-// 	}
-// };
-
-// fetch('https://free-to-play-games-database.p.rapidapi.com/api/game?id=452', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
-
-
 const options = {
 	method: 'GET',
 	headers: {
@@ -52,11 +9,7 @@ var main_page = document.getElementById("main_page")
 
 console.log(main_page)
 let num = 0
-// var elemento = document.createElement("p")
 
-// elemento.appendChild(document.createTextNode("nome do jogo"))
-// console.log(elemento)
-// main_page.appendChild(elemento)
 var card_text = [10]
 var card_img = [10]
 var card1=[10]
@@ -117,21 +70,5 @@ const request = async() => {
 
 }	
 main_page.classList.add("main_page_div")
-
-document.getElementById('home')
-        .addEventListener('click',request);
-
-
-
-
-// var novoParagrafo = document.createElement("p")
-// var texto = document.createTextNode("nome do jogo")
-// novoParagrafo.appendChild(texto)
-// console.log(novoParagrafo)
-
-// var body = document.querySelector("body")
-
-// console.log(body)
-
-// body.appendChild(novoParagrafo)
+request();
 
