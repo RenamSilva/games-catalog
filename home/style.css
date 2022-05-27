@@ -49,22 +49,22 @@ header h2 {
 .div_pc {
     display: flex;
     align-items: center;
-    margin-right: -380px;
+    margin-right: -20%;
 }
 /* botão para browser */
 .div_browser {
     display: flex;
     align-items: center;
-    margin-right: -350px;
+    margin-right: -20%;
 }
 /* botão para all */
 .all {
-    margin-right: -360px;
+    margin-right: -23%;
 }
 /* botao para ir aos favoritos */
 .fav {
     font-weight: 600;
-    margin-right: 50px;
+    margin-right: 5%;
 }
 /* side bar */
 .menu_lateral {
@@ -92,8 +92,8 @@ header h2 {
     border: 1px solid #400067;
     background-color: #400067;
     border-radius: 50px;
-    height: 46px;
-    width: 140px;
+    height: 50%;
+    width: 80%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
