@@ -7,33 +7,43 @@
     border: none;
     outline: none;
 }
+
 /*pagina toda*/
 body {
     /* max-width: 100%; */
     width: 100%;
+    display: flex;
     height: 100vh;
+    flex-direction: column;
     background-color: #102226;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 /*cabeçalho*/
 header {
-    position: absolute;
-    height: 11%;
-    width: 100%;
     position: fixed;
+    height: 9%;
+    width: 100%;
     align-items: center;
     font-family: 'poppins';
     justify-content: space-between;
     color: white;
     display: flex;
     background: #400067;
+    z-index: 1;
 }
+
 /*cabeçalho titulo*/
 header h1 {
     color: #00FF75;
     margin-left: 220px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
 }
 
 header h2 {
@@ -41,47 +51,176 @@ header h2 {
     margin-right: 5px;
     font-weight: 400;
 }
+
 .undefined {
     margin-left: 15%;
-    width: 15%;
+    width: 10%;
 }
+
 /*botao para pc*/
 .div_pc {
     display: flex;
     align-items: center;
     margin-right: -20%;
 }
+
 /* botão para browser */
 .div_browser {
     display: flex;
     align-items: center;
     margin-right: -20%;
 }
+
 /* botão para all */
 .all {
     margin-right: -23%;
 }
+
 /* botao para ir aos favoritos */
 .fav {
     font-weight: 600;
     margin-right: 5%;
 }
-/* side bar */
-.menu_lateral {
-    margin-top: 68px;
-    position: fixed;
-    font-family: 'poppins';
+
+.balaocentro {
+    margin: 2%;
+    margin-top: 2%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    height: 260px;
+    border-radius: 20px;
+    background-color: #C4C4C4;
+    display: none;
+}
+
+/* .NomeGame {
     display: flex;
     align-items: center;
-    height: 89%;
-    width: 15%;
-    flex-direction: column;
-    border: 2px solid #8258A0;
+    justify-content: center;
+    color: white;
+    font-family: 'Poppins';
+} */
+
+/* .Modelo1 {
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+} */
+
+.BalaoPrincipal {
+    position: relative;
+    margin-top: 15%;
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    background-color: #215966;
+    border-radius: 20px;
 }
+
+.gamePrincipal {
+    position: relative;
+    width: 850px;
+    height: 400px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .Games {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+    margin-top: 20%;
+} */
+
+/* .Conteudos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 15%;
+    margin-top: 10%;
+} */
+
 /* botao home da side bar */
-.home {
+
+.menu_lateral {
+    position: fixed;
+    height: 91.5%;
+    width: 5%;
+    top: 9.1%;
+    padding-top: 5%;
+    background: #215966;
+    font-family: 'poppins';
+    box-shadow: 5px 0 0 #8258A0;
+    border-left: 2px solid #215966;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.menu_lateral:hover {
+    width: 12%;
+}
+
+.menu_lateral ul {
+    width: 100%;
+    padding-left: 9px;
+    padding-top: 40px;
+}
+
+.menu_lateral ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+
+.menu_lateral ul li a {
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.menu_lateral ul li .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.menu_lateral ul li .icon ion-icon {
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.menu_lateral ul li a .menu-item {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.menu_lateral ul li .active {
+    background: #8258A0;
+}
+
+
+
+
+/* .home {
     cursor: pointer;
     color: #00FF75;
     box-shadow: 0 0 1em #00FF75;
@@ -96,195 +235,222 @@ header h2 {
     width: 80%;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-.menu_lateral img {
-    width: 30px;
-}
+} */
+
+
+
 /* links da side bar */
-.menu_lateral ul{
+/* .menu_lateral ul {
     list-style: none;
 }
-.menu_lateral ul li{
+
+.menu_lateral ul li {
     cursor: pointer;
     transition: background .3s;
     display: block;
-    padding: 10px 15px ;
+    padding: 10px 15px;
     font-weight: 500;
     font-size: 16px;
 }
-.menu_lateral ul li:hover{
+
+.menu_lateral ul li:hover {
     background-color: #542377;
     width: 190px;
-}
+} */
+
+
+
+
 
 /* centro da pagina */
-.main_page{
-    position:absolute;
-    margin-left: 10%;
-    width: 100%;
-    height: 100vh;
-}
+/* .main_page {
+    display: flex;
+    flex-grow: 1;
+} */
+
 /* baner do jogo em destaque */
-.baner{
+/* .baner {
     position: relative;
-    margin-top: 50%; 
+    margin-top: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left: -5%; 
-    
-} 
-.baner img{
+    margin-left: -5%;
+} */
+
+/* .baner img {
     width: 780px;
     height: 280px;
     border-radius: 30px;
+} */
 
-}
 /* primeiro jogo */
-.card1 img{
+
+/* .card1 img {
     border-radius: 30px;
-    
-}
+
+} */
+
 /* segundo jogo */
-.card2{
+/* .card2 {
     margin-left: -55%;
     margin-top: 5%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  
-}
-.card2 img{
-    border-radius: 30px;
-    width: 290px;
-    height: 190px;
-}
-/* terceiro jogo */
-.card3{
-    margin-left: -5%;
-    margin-top:-16%;
     display: flex;
     align-items: center;
     flex-direction: column;
 
 }
-.card3 img{
+
+.card2 img {
     border-radius: 30px;
     width: 290px;
     height: 190px;
+} */
+
+/* terceiro jogo */
+/* .card3 {
+    margin-left: -5%;
+    margin-top: -16%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
+
+.card3 img {
+    border-radius: 30px;
+    width: 290px;
+    height: 190px;
+} */
+
 /* quarto jogo */
-.card4{
+/* .card4 {
     margin-left: 45%;
     margin-top: -16%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+
 }
-.card4 img{
+
+.card4 img {
     border-radius: 30px;
     width: 290px;
     height: 190px;
-}
+} */
+
 /* quinto jogo */
-.card5{
+/* .card5 {
     margin-left: -55%;
     margin-top: 5%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.card5 img{
+
+.card5 img {
     border-radius: 30px;
     width: 290px;
     height: 190px;
-}
+} */
+
 /* sexto jogo */
-.card6{
+/* .card6 {
     margin-left: -5%;
-    margin-top:-16%;
+    margin-top: -16%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.card6 img{
+
+.card6 img {
     border-radius: 30px;
     width: 290px;
     height: 190px;
-}
+} */
+
 /* setimo jogo */
-.card7{
+/* .card7 {
     margin-left: 45%;
     margin-top: -16%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.card7 img{
+
+.card7 img {
     border-radius: 30px;
     width: 290px;
     height: 190px;
-}
+} */
+
 /* oitavo jogo */
-.card8{
+/* .card8 {
     margin-left: -55%;
     margin-top: 5%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.card8 img{
+
+.card8 img {
     border-radius: 30px;
     width: 290px;
     height: 190px;
-}
+} */
+
 /* nono jogo */
-.card9{
+/* .card9 {
     margin-left: -5%;
-    margin-top:-16%;
+    margin-top: -16%;
     display: flex;
     align-items: center;
     flex-direction: column;
-} 
-.card9 img{
+} */
+
+/* .card9 img {
     border-radius: 30px;
     width: 290px;
     height: 190px;
-}
+} */
+
 /* decimo jogo */
-.card10{
+/* .card10 {
     margin-left: 45%;
-    margin-top:-16%;
+    margin-top: -16%;
     display: flex;
     align-items: center;
     flex-direction: column;
-} 
-.card10 img{
+}
+
+.card10 img {
     border-radius: 30px;
     width: 290px;
     height: 190px;
-}
+} */
+
 /* botao para carregar mais jogos(NÃO HABILITADO) */
 
-.carregar{
+.carregar {
     font-family: 'poppins';
     text-decoration: none;
     margin-top: 120px;
-    margin-left:520px;
+    margin-left: 520px;
 }
-.carregar a{
+
+.carregar a {
     text-decoration: none;
     color: white;
 }
+
 /* titulo dos jogos */
-.card1_text{
+.card1_text {
     color: #00FF75;
     font-family: 'poppins';
     margin-top: 20px;
 }
-.main_page_div{
 
+.main_page_div {
     color: #00FF75;
     font-family: 'poppins';
     margin-top: 20px;
@@ -292,111 +458,190 @@ header h2 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-} 
-@media only screen and (min-width: 850px) and (max-width: 1023px){
+}
 
-    .baner{
-        margin-top: 120%; 
+/* @media only screen and (min-width: 850px) and (max-width: 1023px) {
+
+    .baner {
+        margin-top: 120%;
         margin-left: -5%;
     }
-    .baner img{
+
+    .baner img {
         width: 480px;
         height: 250px;
     }
-    .card2{
+
+    .card2 {
         margin-top: 5%;
         margin-left: -40%;
     }
-    .card3{
+
+    .card3 {
         margin-top: -27.4%;
         margin-left: 40%;
 
     }
-    .card4{
+
+    .card4 {
         margin-top: 5%;
         margin-left: -40%;
     }
-    .card5{
+
+    .card5 {
         margin-top: -27.4%;
         margin-left: 40%;
     }
-    .card6{
+
+    .card6 {
         margin-top: 5%;
         margin-left: -40%;
     }
-    .card7{
+
+    .card7 {
         margin-top: -27.4%;
         margin-left: 40%;
     }
-    .card8{
+
+    .card8 {
         margin-top: 5%;
         margin-left: -40%;
     }
-    .card9{
+
+    .card9 {
         margin-top: -27.4%;
         margin-left: 40%;
     }
-    .card10{
+
+    .card10 {
         margin-top: 5%;
         margin-left: -40%;
     }
 }
 
-@media only screen and (max-width: 849px){
-    .baner{
+@media only screen and (max-width: 849px) {
+    .baner {
         position: absolute;
-        margin-top: -20%; 
+        margin-top: -20%;
         margin-left: -40%;
     }
-    .baner img{
+
+    .baner img {
         width: 290px;
         height: 190px;
     }
-    .card2{
+
+    .card2 {
         position: absolute;
         margin-top: 50%;
         margin-left: -40%;
     }
-    .card3{
+
+    .card3 {
         position: absolute;
         margin-top: 115%;
         margin-left: -40%;
     }
-    .card4{
+
+    .card4 {
         position: absolute;
         margin-top: 185%;
         margin-left: -40%;
     }
-    .card5{
+
+    .card5 {
         position: absolute;
         margin-top: 255%;
         margin-left: -40%;
     }
-    .card6{
+
+    .card6 {
         position: absolute;
         margin-top: 325%;
         margin-left: -40%;
     }
-    .card7{
+
+    .card7 {
         position: absolute;
         margin-top: 395%;
         margin-left: -40%;
     }
-    .card8{
+
+    .card8 {
         position: absolute;
         margin-top: 465%;
         margin-left: -40%;
     }
-    .card9{
+
+    .card9 {
         position: absolute;
         margin-top: 535%;
         margin-left: -40%;
     }
-    .card10{
+
+    .card10 {
         position: absolute;
         margin-top: 605%;
         margin-left: -40%;
     }
+} */
 
+/* .baloes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+} */
 
+/* .paicentral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+} */
+
+.paibalaomenor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.teste {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.botaoHumilde {
+    width: 10%;
+    height: 30px;
+    background: rgba(64, 0, 103, 0.58);
+    box-shadow: 50px 4px 80px #1E3C1E;
+    border-radius: 30px;
+    color: white;
+    font-family: 'poppins';
+}
+
+.More {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8%;
+    margin-top: 2%;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 65%;
+    color: #90EE90;
+    font-family: 'Poppins';
+    font-size: 11px;
+}
+
+.Favoritar {
+    position: absolute;
+    margin-top: 8.25%;
+    margin-right: 9.5%;
 }
