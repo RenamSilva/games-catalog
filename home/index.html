@@ -21,11 +21,16 @@
       <img src="imagens/browser.png" alt="" />
     </div>
     <h2 id="all" onClick="Todos()" class="all">All</h2>
-    <h2 id="fav" class="fav">Favoritos</h2>
+    <h2 id="fav" class="fav" onClick="carregarFavoritos()">Favoritos</h2>
   </header>
 
+  <div id="favTitulo" class="favorites">
+    <h1>My Favorites</h1>
+  </div>
+
   <section>
-    <div class="menu_lateral">
+
+    <div id="hideMenu" class="menu_lateral">
       <nav class="lista">
         <ul>
           <li class="active">
@@ -102,22 +107,40 @@
     </div>
 
   </section>
-  <div class="More"> <button class="botaoHumilde" onclick="colocarJogosNaTela()">Carregar Mais</button></div>
+  <!-- BOTAO DE CARREGAR MAIS -->
+  <div id="botao" class="More"> <button class="botaoHumilde" onclick="colocarJogosNaTela()">Carregar Mais</button></div>
 
+  <!-- JOGO EM DESTAQUE -->
   <div class="BalaoPrincipal" id="balaogrande">
     <div class="gamePrincipal">
       <h2>jogo</h2>
     </div>
   </div>
 
-  <div class="balaocentro" id="balaocentro">
-    <div class="Favoritar"></div>
-
+  <!-- JOGOS DO CATALOGO -->
+  <div class="balaocentro" id="balaocentro" onclick="salvarJogo()">
+    <div class="Favoritar">
+      <a class="estrela"></a>
+    </div>
+    <!-- TITULO DOS JOGOS DO CATALOGO -->
     <div class="titulos">
       <h2>titulo</h2>
     </div>
 
   </div>
+  <!-- PAG FAVORITOS -->
+
+
+  <div class="games" id="games">
+    <div class="divpaifavo">
+      <div id="fav" class="Games1">
+        <img class="FavImg" id="FavImg">
+        <h2>jogo</h2>
+        <div class="G-elements">
+          <a><button>More</button></a>
+        </div>
+      </div>
+    </div>
 
 </body>
 

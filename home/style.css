@@ -32,6 +32,7 @@ header {
     color: white;
     display: flex;
     background: #400067;
+    z-index: 999;
 }
 
 /*cabeçalho titulo*/
@@ -81,6 +82,8 @@ header h2 {
     margin-right: 5%;
 }
 
+/* estilização dos jogos */
+
 .balaocentro {
     position: relative;
     margin: 2%;
@@ -93,13 +96,16 @@ header h2 {
     display: none;
 }
 
-.balaocentro:hover::after {
+/* cria estrela ao passar o cursor do mouse */
+
+.balaocentro .estrela:after {
     bottom: 63px;
     right: 150px;
     content: '\2605';
-    color: orange;
+    color: yellow;
     position: relative;
     font-size: 3.2rem;
+    z-index: 999;
 }
 
 /* img {
@@ -122,6 +128,8 @@ header h2 {
     gap: 150px;
 } */
 
+/* estilização do jogo em destaque */
+
 .BalaoPrincipal {
     position: relative;
     width: 800px;
@@ -134,7 +142,6 @@ header h2 {
     border-radius: 20px;
 }
 
-
 .gamePrincipal {
     position: relative;
     width: 100%;
@@ -142,6 +149,115 @@ header h2 {
     object-fit: cover;
     border-radius: 20px;
     background-repeat: no-repeat;
+}
+
+.paibalaomenor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.teste {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.botaoHumilde {
+    width: 10%;
+    height: 30px;
+    background: rgba(64, 0, 103, 0.58);
+    box-shadow: 50px 4px 80px #1E3C1E;
+    border-radius: 30px;
+    color: white;
+    font-family: 'poppins';
+}
+
+.More {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 8%; */
+    margin-top: 2%;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 65%;
+    color: #90EE90;
+    font-family: 'Poppins';
+    font-size: 11px;
+}
+
+.favorites {
+    display: flex;
+    margin-left: 10%;
+    margin-top: 8%;
+}
+
+.favorites h1 {
+    color: #ffffff;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+hr {
+    margin-left: 8%;
+    margin-top: 1%;
+    width: 80%;
+    mix-blend-mode: lighten;
+    border: 1px solid #3e3e3e;
+}
+
+.Games1 {
+    background-color: #250049;
+    width: 1074px;
+    height: 140px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Poppins";
+    flex-grow: 2;
+}
+
+.games {
+    display: none;
+    margin-top: 3%;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+}
+
+.FavImg {
+    height: 120px;
+    border-radius: 20px;
+}
+
+button {
+    width: 130px;
+    height: 50px;
+    border-radius: 20px;
+    color: #90ee90;
+    background-color: #4a0095;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+span {
+    color: #90ee90;
+    font-weight: 500;
+}
+
+.G-elements {
+    display: flex;
+    flex-games: 1;
+    gap: 50px;
 }
 
 /* .Games {
@@ -233,6 +349,16 @@ header h2 {
     background: #8258A0;
 }
 
+
+.divpaifavo {
+    display: flex;
+    align-items: center;
+}
+
+.fivpaifavo img {
+    width: 365;
+    height: 306;
+}
 
 
 
@@ -447,7 +573,7 @@ header h2 {
 
 /* botao para carregar mais jogos(NÃO HABILITADO) */
 
-.carregar {
+/* .carregar {
     font-family: 'poppins';
     text-decoration: none;
     margin-top: 120px;
@@ -457,10 +583,10 @@ header h2 {
 .carregar a {
     text-decoration: none;
     color: white;
-}
+} */
 
 /* titulo dos jogos */
-.card1_text {
+/* .card1_text {
     color: #00FF75;
     font-family: 'poppins';
     margin-top: 20px;
@@ -474,7 +600,7 @@ header h2 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+} */
 
 /* @media only screen and (min-width: 850px) and (max-width: 1023px) {
 
@@ -614,44 +740,3 @@ header h2 {
     align-items: center;
     width: 100%;
 } */
-
-.paibalaomenor {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.teste {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 1;
-}
-
-.botaoHumilde {
-    width: 10%;
-    height: 30px;
-    background: rgba(64, 0, 103, 0.58);
-    box-shadow: 50px 4px 80px #1E3C1E;
-    border-radius: 30px;
-    color: white;
-    font-family: 'poppins';
-}
-
-.More {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-left: 8%; */
-    margin-top: 2%;
-}
-
-.titulos {
-    display: flex;
-    flex-direction: row;
-    margin-top: 65%;
-    color: #90EE90;
-    font-family: 'Poppins';
-    font-size: 11px;
-}
