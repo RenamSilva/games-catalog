@@ -2,131 +2,159 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Undefined</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Undefined</title>
 </head>
 
 <body onload='Todos()'>
-  <header class="header">
-    <img src="./imagens/Design sem nome.gif" class="undefined" />
-    <div id="pc" class="div_pc" onClick="PC()">
-      <h2>PC</h2>
-      <img src="imagens/computer.png" alt="computer" />
-    </div>
-    <div id="browser" class="div_browser" onClick="Browser()">
-      <h2>Browser</h2>
-      <img src="imagens/browser.png" alt="" />
-    </div>
-    <h2 id="all" onClick="Todos()" class="all">All</h2>
-    <h2 id="fav" class="fav">Favoritos</h2>
-  </header>
+    <header class="header">
+        <img src="./imagens/Design sem nome.gif" class="undefined" />
+        <div id="pc" class="div_pc" onClick="PCP()">
+            <h2>PC</h2>
+            <img src="imagens/computer.png" alt="computer" />
+        </div>
+        <div id="browser" class="div_browser" onClick="Browser()">
+            <h2>Browser</h2>
+            <img src="imagens/browser.png" alt="" />
+        </div>
+        <h2 id="all" onClick="Todos()" class="all">All</h2>
+        <h2 id="fav" class="fav">Favoritos</h2>
+    </header>
 
-  <section>
-    <div class="menu_lateral">
-      <nav class="lista">
-        <ul>
-          <li class="active">
-            <a class="list" href="all">
-              <span class="icon">
-                <ion-icon name="home-outline"></ion-icon>
-              </span>
-              <span class="menu-item">HOME</span>
-            </a>
-          </li>
-          <li>
-            <a class="list" onclick="pvp()">
-              <span class="icon">
-                <ion-icon name="people-circle-outline"></ion-icon>
-              </span>
-              <span class="menu-item">PVP</span>
-            </a>
-          </li>
+    <section>
+        <div class="menu_lateral">
+            <nav class="lista">
+                <ul>
+                    <li class="active">
+                        <a class="list" onclick="Todos()">
+                            <span class="icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>
+                            <span class="menu-item">HOME</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list" onclick="pvp()">
+                            <span class="icon">
+                                <ion-icon name="people-circle-outline"></ion-icon>
+                            </span>
+                            <span class="menu-item">PVP</span>
+                        </a>
+                    </li>
 
-          <li>
-            <a class="list" onclick="mmofps()">
-              <span class="icon">
-                <ion-icon name="shield-half-outline"></ion-icon>
-              </span>
-              <span class="menu-item">mmofps</span>
-            </a>
-          </li>
+                    <li>
+                        <a class="list" onclick="mmofps()">
+                            <span class="icon">
+                                <ion-icon name="shield-half-outline"></ion-icon>
+                            </span>
+                            <span class="menu-item">mmofps</span>
+                        </a>
+                    </li>
 
-          <li>
-            <a class="list" onclick="Survival()">
-              <span class="icon">
-                <ion-icon name="nutrition-outline"></ion-icon>
-              </span>
-              <span class="menu-item">Survival</span>
-            </a>
-          </li>
+                    <li>
+                        <a class="list" onclick="Survival()">
+                            <span class="icon">
+                                <ion-icon name="nutrition-outline"></ion-icon>
+                            </span>
+                            <span class="menu-item">Survival</span>
+                        </a>
+                    </li>
 
-          <li>
-            <a class="list" onclick="Space()">
+                    <li>
+                        <a class="list" onclick="Space()">
 
-              <span class="icon">
-                <ion-icon name="planet-outline"></ion-icon>
-              </span>
-              <span class="menu-item">Space</span>
-            </a>
-          </li>
+                            <span class="icon">
+                                <ion-icon name="planet-outline"></ion-icon>
+                            </span>
+                            <span class="menu-item">Space</span>
+                        </a>
+                    </li>
 
-          <li>
-            <a class="list" onclick="Fighting()">
-              <span class="icon">
-                <ion-icon name="trophy-outline"></ion-icon>
-              </span>
-              <span class="menu-item">Fighting</span>
-            </a>
-          </li>
+                    <li>
+                        <a class="list" onclick="Fighting()">
+                            <span class="icon">
+                                <ion-icon name="trophy-outline"></ion-icon>
+                            </span>
+                            <span class="menu-item">Fighting</span>
+                        </a>
+                    </li>
 
-          <li>
-            <a class="list" onclick="Horror()">
-              <span class="icon">
-                <ion-icon name="skull-outline"></ion-icon>
-              </span>
-              <span class="menu-item">Horror</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    </div>
+                    <li>
+                        <a class="list" onclick="Horror()">
+                            <span class="icon">
+                                <ion-icon name="skull-outline"></ion-icon>
+                            </span>
+                            <span class="menu-item">Horror</span>
+                        </a>
+                    </li>
 
-    <div class="teste">
-      <div class="paicentral" id="paicentral"></div>
+                    <li>
+                        <a class="list" onclick="Racing()">
+                            <span class="icon">
+                                <ion-icon name="car-sport-outline"></ion-icon>
+                            </span>
+                            <span class="menu-item">Racing</span>
+                        </a>
+                    </li>
 
-      <div id="paibalaomenor" class="paibalaomenor"></div>
-    </div>
+                    <li>
+                        <a class="list" onclick="Tank()">
+                            <span class="icon">
+                                <ion-icon name="boat-outline"></ion-icon>
+                            </span>
+                            <span class="menu-item">Tank</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        </div>
 
-  </section>
-  <div class="More"> <button class="botaoHumilde" onclick="colocarJogosNaTela()">Carregar Mais</button></div>
+        <div class="teste">
+            <div class="paicentral" id="paicentral"></div>
+
+            <div id="paibalaomenor" class="paibalaomenor"></div>
+        </div>
+
+    </section>
+    <div class="More"> <button class="botaoHumilde" onclick="colocarJogosNaTela()" id="botaoCarregar">Carregar
+            Mais</button></div>
 
 </body>
 
 </html>
 
+
+<!-- JOGO EM DESTAQUE -->
 <div class="BalaoPrincipal" id="balaogrande">
-  <div class="gamePrincipal">
-    <h2>jogo</h2>
-  </div>
+    <div class="gamePrincipal">
+        <a class="nomePrinc">
+            <h2 class="nomeBalao">jogo</h2>
+        </a>
+    </div>
 </div>
+<!-- ------------- -->
 
+
+<!-- JOGOS DO CATALOGO -->
 <div class="balaocentro" id="balaocentro">
-  <div class="Favoritar">
-    <span class="icon">
-      <ion-icon name="star-outline"></ion-icon>
-    </span>
-  </div>
+    <div class="Favoritar">
+        <span class="icon">
+        </span>
+    </div>
+    <!-- JOGOS DO CATALOGO -->
+    <div class="titulos">
+        <a>
+            <h2>titulo</h2>
+        </a>
+    </div>
 
-  <div class="titulos">
-    <h2>titulo</h2>
-  </div>
 
 </div>
-
+<script src="https://unpkg.com/scrollreveal"></script>
 <script src="main.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
