@@ -56,7 +56,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       <a href="#">
         <img src="https://avatars.githubusercontent.com/u/104037870?v=4" width="100px;" alt="Foto do Diuary no Github"/><br>
         <sub>
-          <b>Diuary</b>
+          <b>Diuary Cordeiro Machado</b>
         </sub>
       </a>
     </td>
