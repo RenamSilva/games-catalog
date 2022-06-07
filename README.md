@@ -3,9 +3,10 @@
 
 
 > O Projeto Undefined surgiu através de um trabalho avaliativo mensal (projeto mensal) proposto pelo professor Matheus Castegnaro do curso de Engenharia de Software,
-> onde o professor, como cliente, solicitou que cada equipe devenvolvesse um catálogo de jogos baseado.
+> onde o professor, como cliente, solicitou que cada equipe devenvolvesse um catálogo de jogos baseado em alguns requisitos e wireframe disponibilizados pelo professor Matheus.
 > Para a solução do desafio o grupo teve como base o recurso 'https://www.freetogame.com/api-doc'.
 > O projeto foi desenvolvido com as tecnologias HTML 5 / CSS 3 / Javascript.
+> Segue link para o Github Pages --> https://renamsilva.github.io/games-catalog/
 ## 🚀 Acessando Games Catalog
 
 Para acessar Games Catalog, siga estas etapas:
