@@ -19,7 +19,6 @@ Etapa 2:
 
 ```
 <Acesse o link do projeto em [games-catalog](renam_silva_alves.html)>
-<Ou acesse diretamente através do link LINKGITHUBSPAGE>
 ```
 
 ## 🤝 Colaboradores
