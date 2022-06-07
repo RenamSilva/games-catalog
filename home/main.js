@@ -132,7 +132,7 @@ function colocarJogosNaTela(jogosNaTela = jogos) {
     }
 
     for (let i = contagem; i <= contagem + 8; i++) {
-        if(!jogosNaTela[i]){
+        if (!jogosNaTela[i]) {
             document.getElementById('botaoCarregar').style.display = 'none'
             contagem++
             return;
