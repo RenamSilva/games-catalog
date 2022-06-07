@@ -8,6 +8,7 @@
     outline: none;
 }
 
+
 /*pagina toda*/
 
 body {
@@ -22,11 +23,12 @@ body {
     background-size: cover;
 }
 
+
 /*cabeçalho*/
 
 header {
     position: fixed;
-    height: 12%;
+    height: 10%;
     width: 100%;
     align-items: center;
     font-family: "poppins";
@@ -35,8 +37,8 @@ header {
     display: flex;
     background: #400067;
     z-index: 3;
-
 }
+
 
 /*cabeçalho titulo*/
 
@@ -50,6 +52,39 @@ section {
     flex-direction: row;
 }
 
+h5 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+h4 {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: #ffffffbc;
+}
+
+h3 {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffffff;
+}
+
 header h2 {
     font-size: 16px;
     margin-right: 5px;
@@ -61,6 +96,7 @@ header h2 {
     width: 10%;
 }
 
+
 /*botao para pc*/
 
 .div_pc {
@@ -68,7 +104,6 @@ header h2 {
     align-items: center;
     margin-right: -20%;
 }
-
 
 .div_pc:hover {
     cursor: pointer;
@@ -78,6 +113,7 @@ header h2 {
     color: black;
 }
 
+
 /* botão para browser */
 
 .div_browser {
@@ -86,7 +122,6 @@ header h2 {
     margin-right: -20%;
 }
 
-
 .div_browser:hover {
     cursor: pointer;
     background-color: #d1b4e3;
@@ -94,6 +129,7 @@ header h2 {
     border-radius: 10px;
     color: black;
 }
+
 
 /* botão para all */
 
@@ -117,74 +153,225 @@ header h2 {
     margin-right: 5%;
 }
 
+.fav:hover {
+    cursor: pointer;
+    background-color: #d1b4e3;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
 .balaocentro {
+    cursor: pointer;
     position: relative;
     margin: 2%;
+    margin-top: 2%;
+    margin-left: 3%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 400px;
-    height: 260px;
+    width: 350px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #c4c4c4;
     border-radius: 20px;
     display: none;
+    border: 1px solid #5f3f75;
+    box-shadow: 8px 3px 5px #5f3f75;
 }
 
-/* cria estrela ao passar o cursor do mouse */
-
-.balaocentro .estrela:after {
+.balaocentro .estrela {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    background-color: #8258a0;
+    border-radius: 30px;
+    height: 50px;
+    width: 54px;
+    padding-bottom: 4px;
     bottom: 63px;
     right: 150px;
-    content: '\2605';
-    color: yellow;
+    content: "\2605";
+    color: white;
     position: relative;
     font-size: 3.2rem;
-    z-index: 999;
 }
 
-/* img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
+.balaocentro .estrela img {
+    height: 30px;
+    width: 34px;
+}
 
-/* .NomeGame {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: 'Poppins';
-} */
+.balaocentro:hover {
+    cursor: pointer;
+    bottom: 20px;
+    right: 30px;
+    position: relative;
+    font-size: 2rem;
+}
 
-/* .Modelo1 {
-    display: flex;
-    flex-direction: row;
-    gap: 150px;
-} */
-
-/* estilização do jogo em destaque */
+a {
+    text-decoration: none;
+    color: #00ff75;
+}
 
 .BalaoPrincipal {
     position: relative;
-    width: 800px;
-    height: 400px;
     margin-top: 15%;
     display: none;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     border-radius: 20px;
+    border: 2px solid #5f3f75;
+}
+
+.BalaoPrincipal::after {
+    content: "";
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgb(113, 56, 125) 300%, #5f3f75 100%);
+    border-radius: 11px;
+}
+
+.nomePrinc {
+    display: flex;
+    justify-content: center;
+    margin-top: 50%;
+    color: #00ff75;
+}
+
+.BalaoPrincipal:hover,
+.BalaoPrincipal:focus {
+    transform: translate(10px) scale(1.02);
+    box-shadow: 0 0 1em #400067;
 }
 
 .gamePrincipal {
     position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 800px;
+    height: 350px;
     border-radius: 20px;
     background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* botao home da side bar */
+
+.menu_lateral {
+    position: fixed;
+    height: 91.5%;
+    width: 70px;
+    top: 9.1%;
+    background: #215966;
+    font-family: "poppins";
+    box-shadow: 5px 0 0 #8258a0;
+    border-left: 2px solid #215966;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.menu_lateral:hover {
+    width: 149px;
+}
+
+.menu_lateral ul {
+    width: 100%;
+    padding-left: 9px;
+    padding-top: 40px;
+}
+
+.menu_lateral ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.menu_lateral ul li a {
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.menu_lateral ul li .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.menu_lateral ul li .icon ion-icon {
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.menu_lateral ul li a .menu-item {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.menu_lateral ul li .active {
+    background: #8258a0;
+}
+
+
+/* botao para carregar mais jogos(NÃO HABILITADO) */
+
+.carregar {
+    font-family: "poppins";
+    text-decoration: none;
+    margin-top: 120px;
+    margin-left: 520px;
+}
+
+.carregar a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* titulo dos jogos */
+
+.card1_text {
+    color: #00ff75;
+    font-family: "poppins";
+    margin-top: 20px;
+}
+
+.main_page_div {
+    color: #00ff75;
+    font-family: "poppins";
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .paibalaomenor {
+    margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -196,33 +383,82 @@ header h2 {
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
+    margin-left: 5%;
 }
 
 .botaoHumilde {
     width: 10%;
     height: 30px;
     background: rgba(64, 0, 103, 0.58);
-    box-shadow: 50px 4px 80px #1E3C1E;
+    box-shadow: 50px 4px 80px #1e3c1e;
     border-radius: 30px;
     color: white;
-    font-family: 'poppins';
+    font-family: "poppins";
+    border: 1px solid #634fdb;
+    transition: all 0.3s ease;
+}
+
+.botaoHumilde:hover {
+    background-color: #ffff;
+    color: #634fdb;
 }
 
 .More {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-left: 8%; */
+    margin-left: 8%;
     margin-top: 2%;
 }
 
 .titulos {
     display: flex;
     flex-direction: row;
-    margin-top: 65%;
-    color: #90EE90;
-    font-family: 'Poppins';
+    margin-top: 60%;
+    color: #90ee90;
+    font-family: "Poppins";
     font-size: 11px;
+}
+
+.Favoritar {
+    position: absolute;
+    margin-top: 8.25%;
+    margin-right: 9.5%;
+}
+
+.Games1 {
+    background-color: #250049;
+    width: 1074px;
+    height: 140px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Poppins";
+    flex-grow: 2;
+}
+
+.games {
+    display: none;
+    margin-top: 3%;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+}
+
+.FavImg {
+    height: 120px;
+    border-radius: 20px;
+}
+
+.divpaifavo {
+    display: flex;
+    align-items: center;
+}
+
+.fivpaifavo img {
+    width: 365;
+    height: 306;
 }
 
 .favorites {
@@ -245,6 +481,36 @@ hr {
     width: 80%;
     mix-blend-mode: lighten;
     border: 1px solid #3e3e3e;
+}
+
+.withoutGames {
+    display: none;
+    justify-content: center;
+    margin-top: 8%;
+}
+
+.withoutGames h4 {
+    display: flex;
+    justify-content: center;
+}
+
+.sad-face {
+    display: flex;
+    justify-content: center;
+    margin-left: 100%;
+}
+
+.all-games {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    margin-left: 27%;
+    width: 293px;
+    height: 113px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background: #4a0095;
 }
 
 .Games1 {
@@ -283,105 +549,9 @@ button {
 }
 
 span {
-    color: #90ee90;
+    /* color: #90ee90; */
     font-weight: 500;
 }
-
-.G-elements {
-    display: flex;
-    flex-games: 1;
-    gap: 50px;
-}
-
-/* .Games {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 5%;
-    margin-top: 20%;
-} */
-
-/* .Conteudos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 15%;
-    margin-top: 10%;
-} */
-
-/* botao home da side bar */
-
-.menu_lateral {
-    position: fixed;
-    height: 91.5%;
-    width: 5%;
-    top: 9.1%;
-    padding-top: 5%;
-    background: #215966;
-    font-family: 'poppins';
-    box-shadow: 5px 0 0 #8258A0;
-    border-left: 2px solid #215966;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-.menu_lateral:hover {
-    width: 12%;
-}
-
-.menu_lateral ul {
-    width: 100%;
-    padding-left: 9px;
-    padding-top: 40px;
-}
-
-.menu_lateral ul li {
-    position: relative;
-    list-style: none;
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-
-}
-
-.menu_lateral ul li a {
-    position: relative;
-    display: flex;
-    width: 100%;
-    text-decoration: none;
-    color: white;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.menu_lateral ul li .icon {
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60px;
-    text-align: center;
-    line-height: 70px;
-}
-
-.menu_lateral ul li .icon ion-icon {
-    position: relative;
-    font-size: 1.5rem;
-    z-index: 1;
-}
-
-.menu_lateral ul li a .menu-item {
-    position: relative;
-    display: block;
-    padding-left: 10px;
-    height: 60px;
-    line-height: 60px;
-    white-space: nowrap;
-}
-
-.menu_lateral ul li .active {
-    background: #8258A0;
-}
-
 
 .divpaifavo {
     display: flex;
@@ -393,94 +563,128 @@ span {
     height: 306;
 }
 
-.menu_lateral {
-    position: fixed;
-    height: 91.5%;
-    width: 5%;
-    top: 9.1%;
-    background: #215966;
-    font-family: "poppins";
-    box-shadow: 5px 0 0 #8258a0;
-    border-left: 2px solid #215966;
-    overflow-x: hidden;
-    transition: 0.5s;
-    z-index: 2;
-}
-
-.menu_lateral:hover {
-    width: 12%;
-}
-
-.menu_lateral ul {
-    width: 100%;
-    padding-left: 9px;
-    padding-top: 40px;
-}
-
-.card3 img {
-    border-radius: 30px;
-    width: 290px;
-    height: 190px;
-} */
-
-
-.carregar {
-    font-family: "poppins";
-    text-decoration: none;
-    margin-top: 120px;
-    margin-left: 520px;
-}
-
-.carregar a {
-    text-decoration: none;
-    color: white;
-}
-
-
-/* titulo dos jogos */
-
-.card1_text {
-    color: #00ff75;
-    font-family: "poppins";
-    margin-top: 20px;
-}
-
-.main_page_div {
-    color: #00ff75;
-    font-family: "poppins";
-    margin-top: 20px;
+.G-elements {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    /* flex-games: 1; */
+    gap: 50px;
 }
 
-.card8 img {
-    border-radius: 30px;
-    width: 290px;
-    height: 190px;
+@media only screen and (min-width: 790px) and (max-width: 1023px) {
+    .BalaoPrincipal {
+        margin-top: 15%;
+        margin-left: 5%;
+        width: 560px;
+        height: 280px;
+        transition: 1s;
+    }
+
+    .balaocentro {
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+
+    .menu-lateral {
+        width: 9%;
+    }
+
+    .menu_lateral .icon ion-icon {
+        /* width: 100%; */
+        margin-left: -25px;
+    }
+
+    .fav {
+        margin-right: 5%;
+    }
+
+    .undefined {
+        margin-left: 15%;
+        width: 18%;
+    }
+
+    .divpaifavo {
+        width: 70%;
+        margin-left: -30%;
+    }
 }
 
+@media only screen and (max-width: 790px) {
+    .header {
+        height: 9%;
+    }
 
-.More {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-left: 8%; */
-    margin-top: 2%;
-}
+    .BalaoPrincipal {
+        margin-top: 27%;
+        margin-left: 4%;
+        width: 335px;
+        height: 200px;
+        transition: 1s;
+    }
 
-.titulos {
-    display: flex;
-    flex-direction: row;
-    margin-top: 60%;
-    color: #90ee90;
-    font-family: "Poppins";
-    font-size: 11px;
-}
+    .nomePrinc {
+        margin-top: 62%;
+    }
 
-.Favoritar {
-    position: absolute;
-    margin-top: 8.25%;
-    margin-right: 9.5%;
+    .balaocentro {
+        margin-left: 5%;
+        margin-top: 15%;
+        width: 270px;
+        height: 170px;
+        transition: 1s;
+    }
+
+    .titulos {
+        margin-top: 67%;
+    }
+
+    .menu_lateral {
+        width: 12%;
+    }
+
+    .menu_lateral .icon ion-icon {
+        /* width: 100%; */
+        margin-left: -25px;
+    }
+
+    .fav {
+        margin-right: 3%;
+    }
+
+    .all {
+        margin-right: -2%;
+    }
+
+    .div_browser {
+        margin-right: -3%;
+    }
+
+    .div_pc {
+        margin-right: -4%;
+    }
+
+    .undefined {
+        margin-left: 5%;
+        width: 18%;
+    }
+
+    .botaoHumilde {
+        margin-top: 10%;
+        width: 38%;
+        height: 33px;
+    }
+
+    .divpaifavo {
+        margin-left: -30%;
+    }
+
+    .Games1 {
+        height: 135%;
+        width: 16%;
+        display: grid;
+        justify-items: center;
+    }
+
+    .Games1 h2 {
+        font-size: 20px;
+        padding: 5%;
+    }
 }

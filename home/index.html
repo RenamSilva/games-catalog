@@ -9,6 +9,7 @@
     <title>Undefined</title>
 </head>
 
+
 <body onload='Todos()'>
     <header class="header">
         <img src="./imagens/Design sem nome.gif" class="undefined" />
@@ -21,11 +22,29 @@
             <img src="imagens/browser.png" alt="" />
         </div>
         <h2 id="all" onClick="Todos()" class="all">All</h2>
-        <h2 id="fav" class="fav">Favoritos</h2>
+        <h2 id="fav" class="fav" onClick="carregarFavoritos()">Favoritos</h2>
     </header>
 
+    <div id="favTitulo" class="favorites">
+        <h1>My Favorites</h1>
+    </div>
+    <hr noshade>
+    </hr>
+    <div class="withoutGames">
+        <div class="oh-ooh">
+            <h3>Oh Ooh! You don’t have games yet...</h3>
+            <div class="sad-face">
+                <img src="./imagens/sad_Face.svg">
+            </div>
+            <h4>Go to the games page and keep exploring</h4>
+            <div class="all-games">
+                <h5>All Games</h5>
+            </div>
+        </div>
+    </div>
+
     <section>
-        <div class="menu_lateral">
+        <div id="hideMenu" class="menu_lateral">
             <nav class="lista">
                 <ul>
                     <li class="active">
@@ -120,7 +139,8 @@
         </div>
 
     </section>
-    <div class="More"> <button class="botaoHumilde" onclick="colocarJogosNaTela()" id="botaoCarregar">Carregar
+    <div id="botao" class="More"> <button class="botaoHumilde" onclick="colocarJogosNaTela()"
+            id="botaoCarregar">Carregar
             Mais</button></div>
 </body>
 
@@ -129,7 +149,7 @@
 <!-- JOGO EM DESTAQUE -->
 <div class="BalaoPrincipal" id="balaogrande">
     <div class="gamePrincipal">
-        <a class="nomePrinc">
+        <a class="nomePrinc" target="_blank">
             <h2 class="nomeBalao">jogo</h2>
         </a>
     </div>
@@ -140,19 +160,35 @@
 <!-- JOGOS DO CATALOGO -->
 <div class="balaocentro" id="balaocentro">
     <div class="Favoritar">
-        <span class="icon">
-        </span>
+        <a class="estrela"><img src="imagens/estrelinha.png"></a>
     </div>
-    <!-- JOGOS DO CATALOGO -->
+    <!-- TITULO DOS JOGOS DO CATALOGO -->
     <div class="titulos">
-        <a>
+        <a target="_blank">
             <h2>titulo</h2>
         </a>
     </div>
 
-
 </div>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="main.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- ------------- -->
+</div>
+
+<div class="games" id="games">
+    <div class="divpaifavo">
+        <div id="fav" class="Games1">
+            <img class="FavImg" id="FavImg">
+            <h2>jogo</h2>
+            <div class="G-elements">
+                <a target="_blank"><button> More</button></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="side_bar.js"></script>
+    <script src="header.js"></script>
+    <script src="favorites.js"></script>
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
