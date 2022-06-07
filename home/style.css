@@ -565,7 +565,7 @@ span {
 
 .G-elements {
     display: flex;
-    flex-games: 1;
+    /* flex-games: 1; */
     gap: 50px;
 }
 
