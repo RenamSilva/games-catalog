@@ -1,56 +1,70 @@
 const options = {
-    method: 'GET',
+    method: "GET",
     headers: {
-        'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
-        'X-RapidAPI-Key': '94bd9a0258mshbb54c719823d4d2p19082ajsn4760e6d66c6a'
-    }
+        "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
+        "X-RapidAPI-Key": "94bd9a0258mshbb54c719823d4d2p19082ajsn4760e6d66c6a",
+    },
 };
 
-const balaogrande = document.getElementById("balaogrande")
-const balaopequeno = document.getElementById("balaocentro")
-var jogos = []
+//              GLOBAIS
+
+const balaogrande = document.getElementById("balaogrande");
+const balaopequeno = document.getElementById("balaocentro");
+const balaofav = document.getElementById("games")
+
+var jogos = [];
 let contagem = 0;
-let atual = ''
+let atual = "";
+
 function limparTela() {
-    document.getElementById("paicentral").innerHTML = '';
+    document.getElementById("paicentral").innerHTML = "";
 
     const myNode = document.getElementById("paibalaomenor");
     while (myNode.firstChild) {
         myNode.removeChild(myNode.lastChild);
     }
-
 }
+
+//--------------- ABRE FILTROS CATEGORIA------------
 
 async function Todos() {
     limparTela();
-    jogos = await pegarTodos()
-    atual = 'all'
+    jogos = await pegarPopularidade();
+    atual = "all";
     contagem = 0;
-    colocarJogosNaTela(jogos)
+
+    colocarJogosNaTela(jogos);
 }
 
 async function Browser() {
     limparTela();
-    jogos = await pegarBrowser()
-    atual = 'browser'
-    contagem = 0
-    colocarJogosNaTela(jogos)
+    jogos = await pegarBrowser();
+    atual = "browser";
+    contagem = 0;
+    colocarJogosNaTela(jogos);
+}
+async function PCP() {
+    limparTela();
+    jogos = await pegarPC();
+    atual = "pc";
+    contagem = 0;
+    colocarJogosNaTela(jogos);
 }
 
-// funções das modalidades
+// MODALIDADES
 
 async function pvp() {
-    limparTela()
-    jogos = await pegarPvp(atual)
-    contagem = 0
-    colocarJogosNaTela(jogos)
+    limparTela();
+    jogos = await pegarPvp(atual);
+    contagem = 0;
+    colocarJogosNaTela(jogos);
 }
 
 async function mmofps() {
     limparTela();
     jogos = await pegarmmofps(atual);
     contagem = 0;
-    colocarJogosNaTela(jogos)
+    colocarJogosNaTela(jogos);
 }
 
 async function Survival() {
@@ -81,182 +95,99 @@ async function Horror() {
     colocarJogosNaTela(jogos);
 }
 
-async function pegarHorror(atual) {
-    console.log(
-        `https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=horror`
-    );
-    return fetch(
-        `https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=horror`,
-        options
-    )
-        .then((response) => response.json())
-        .then((response) => {
-            return response;
-        })
-        .catch((err) => console.error(err));
+async function Racing() {
+    limparTela();
+    jogos = await pegarRacing(atual);
+    contagem = 0;
+    colocarJogosNaTela(jogos);
 }
 
-async function pegarFighting(atual) {
-    console.log(
-        `https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=fighting`
-    );
-    return fetch(
-        `https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=fighting`,
-        options
-    )
-        .then((response) => response.json())
-        .then((response) => {
-            return response;
-        })
-        .catch((err) => console.error(err));
-}
-
-async function pegarSpace(atual) {
-    console.log(
-        `https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=space`
-    );
-    return fetch(
-        `https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=space`,
-        options
-    )
-        .then((response) => response.json())
-        .then((response) => {
-            return response;
-        })
-        .catch((err) => console.error(err));
-}
-
-async function pegarSurvival(atual) {
-    console.log(
-        `https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=survival`
-    );
-    return fetch(
-        `https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=survival`,
-        options
-    )
-        .then((response) => response.json())
-        .then((response) => {
-            return response;
-        })
-        .catch((err) => console.error(err));
+async function Tank() {
+    limparTela();
+    jogos = await pegarTank(atual);
+    contagem = 0;
+    colocarJogosNaTela(jogos);
 }
 
 
-async function pegarmmofps(atual) {
-    console.log(`https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=mmofps`)
-    return fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=mmofps`, options)
-        .then(response => response.json())
-        .then(response => {
-            return response
-        })
-        .catch(err => console.error(err));
-}
-
-
-
-
-
-
-async function pegarPvp(atual) {
-    console.log(`https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=pvp`)
-    return fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${atual}&category=pvp`, options)
-        .then(response => response.json())
-        .then(response => {
-            return response
-        })
-        .catch(err => console.error(err));
-}
+//-------- COLOCAR 10 ELEMENTOS NA TELA ---------
 
 function colocarJogosNaTela(jogosNaTela = jogos) {
-
-
+    document.getElementById('botaoCarregar').style.display = 'block'
     if (contagem == 0) {
         const cloneBalaoGrande = balaogrande.cloneNode(true);
 
-        cloneBalaoGrande.getElementsByTagName("h2")[0].innerHTML = jogosNaTela[0].title
-        cloneBalaoGrande.setAttribute("style", `background-image: url(${jogosNaTela[0].thumbnail}); `)
-        cloneBalaoGrande.style.display = 'flex'
-
-        document.getElementById("paicentral").appendChild(cloneBalaoGrande)
+        cloneBalaoGrande.getElementsByTagName("h2")[0].innerHTML =
+            jogosNaTela[0].title;
+        cloneBalaoGrande.setAttribute(
+            "style",
+            `background-image: url(${jogosNaTela[0].thumbnail}); background-size: cover;`
+        );
+        cloneBalaoGrande.style.display = "flex";
+        cloneBalaoGrande
+            .getElementsByTagName("a")[0]
+            .setAttribute("href", `${jogosNaTela[0].freetogame_profile_url}`); // AO CLICAR NO NOME DO JOGO, REDIRECIONA PARA A PAGINA DO JOGO
+        document.getElementById("paicentral").appendChild(cloneBalaoGrande);
         contagem++;
     }
 
-
     for (let i = contagem; i <= contagem + 8; i++) {
-        const cloneBalaoPequeno = balaopequeno.cloneNode(true)
+        if(!jogosNaTela[i]){
+            document.getElementById('botaoCarregar').style.display = 'none'
+            contagem++
+            return;
+        }
 
-        cloneBalaoPequeno.getElementsByTagName("h2")[0].innerHTML = jogosNaTela[i].title
-        cloneBalaoPequeno.setAttribute("style", `background: url(${jogosNaTela[i].thumbnail}); background-size: cover;`)
-        cloneBalaoPequeno.style.display = 'flex'
+        const cloneBalaoPequeno = balaopequeno.cloneNode(true);
 
-        document.getElementById("paibalaomenor").appendChild(cloneBalaoPequeno)
+        cloneBalaoPequeno.getElementsByTagName('a')[0].addEventListener("click", () => {
+            favoritos(jogosNaTela[i])
+        })
+
+
+        cloneBalaoPequeno.getElementsByTagName("h2")[0].innerHTML =
+            jogosNaTela[i].title;
+        cloneBalaoPequeno.setAttribute(
+            "style",
+            `background: url(${jogosNaTela[i].thumbnail}); background-size: cover;`
+        );
+        cloneBalaoPequeno.style.display = "flex";
+        cloneBalaoPequeno
+            .getElementsByTagName("a")[1]
+            .setAttribute("href", `${jogosNaTela[i].freetogame_profile_url}`); // AO CLICAR NO NOME DO JOGO, REDIRECIONA PARA A PAGINA DO JOGO
+        cloneBalaoPequeno.classList.add(`show-balao-${i}`);
+
+        document.getElementById("paibalaomenor").appendChild(cloneBalaoPequeno);
+        ScrollReveal().reveal(`.show-balao-${i}`, {
+            //EFEITO SCROLLREVEAL
+            duration: 2000,
+        });
     }
 
+    document.getElementById('botao').style.display = 'flex';
+    document.getElementById('favTitulo').style.display = 'none'
+    document.getElementById('hideMenu').style.display = 'flex'
     contagem += 9;
 }
 
-
 function limparTela() {
-    document.getElementById("paicentral").innerHTML = '';
-    let i = 1
+    document.getElementById("paicentral").innerHTML = "";
+    let i = 1;
 
     const myNode = document.getElementById("paibalaomenor");
     while (myNode.firstChild) {
         myNode.removeChild(myNode.lastChild);
     }
-
-}
-
-async function pegarTodos() {
-    return fetch('https://free-to-play-games-database.p.rapidapi.com/api/games', options)
-        .then(response => response.json())
-        .then(response => {
-            return response
-        })
-        .catch(err => console.error(err));
 }
 
 
-async function Plataforms() {
-    return await fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=all')
-        .then(response => response.json())
-        .then(response => {
-            return response
-        })
-        .catch(err => console.error(err));
-}
-async function PC() {
-    return await fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc')
-        .then(response => response.json())
-        .then(response => {
-            return response
-        })
-        .catch(err => console.error(err));
-}
 
-// colocarJogosNaTela(jogos);
+//---------- ANIMAÇÃO MENU LATERAL---------
 
+const list = document.querySelectorAll(".list");
 
-
-async function pegarBrowser() {
-    return await fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser', options)
-        .then(response => response.json())
-        .then(response => {
-            console.log(response)
-            return response
-        })
-        .catch(err => console.error(err));
-}
-// MENU LATERAL
-
-const list = document.querySelectorAll('.list');
 function activeLink() {
-    list.forEach((item) =>
-        item.classList.remove('active'));
-    this.classList.add('active');
+    list.forEach((item) => item.classList.remove("active"));
+    this.classList.add("active");
 }
-list.forEach((item) =>
-    item.addEventListener('click', activeLink));
-
-
-
+list.forEach((item) => item.addEventListener("click", activeLink));
