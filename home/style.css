@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
 * {
     box-sizing: border-box;
@@ -9,6 +9,7 @@
 }
 
 /*pagina toda*/
+
 body {
     /* max-width: 100%; */
     width: 100%;
@@ -22,22 +23,25 @@ body {
 }
 
 /*cabeçalho*/
+
 header {
     position: fixed;
-    height: 9%;
+    height: 12%;
     width: 100%;
     align-items: center;
-    font-family: 'poppins';
+    font-family: "poppins";
     justify-content: space-between;
     color: white;
     display: flex;
     background: #400067;
-    z-index: 999;
+    z-index: 3;
+
 }
 
 /*cabeçalho titulo*/
+
 header h1 {
-    color: #00FF75;
+    color: #00ff75;
     margin-left: 220px;
 }
 
@@ -54,35 +58,64 @@ header h2 {
 
 .undefined {
     margin-left: 15%;
-    width: 15%;
+    width: 10%;
 }
 
 /*botao para pc*/
+
 .div_pc {
     display: flex;
     align-items: center;
     margin-right: -20%;
 }
 
+
+.div_pc:hover {
+    cursor: pointer;
+    background-color: #d1b4e3;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
 /* botão para browser */
+
 .div_browser {
     display: flex;
     align-items: center;
     margin-right: -20%;
 }
 
+
+.div_browser:hover {
+    cursor: pointer;
+    background-color: #d1b4e3;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
 /* botão para all */
+
 .all {
     margin-right: -23%;
 }
 
+.all:hover {
+    cursor: pointer;
+    background-color: #d1b4e3;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+
 /* botao para ir aos favoritos */
+
 .fav {
     font-weight: 600;
     margin-right: 5%;
 }
-
-/* estilização dos jogos */
 
 .balaocentro {
     position: relative;
@@ -360,103 +393,28 @@ span {
     height: 306;
 }
 
-
-
-/* .home {
-    cursor: pointer;
-    color: #00FF75;
-    box-shadow: 0 0 1em #00FF75;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #400067;
-    background-color: #400067;
-    border-radius: 50px;
-    height: 50%;
-    width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-} */
-
-
-
-/* links da side bar */
-/* .menu_lateral ul {
-    list-style: none;
+.menu_lateral {
+    position: fixed;
+    height: 91.5%;
+    width: 5%;
+    top: 9.1%;
+    background: #215966;
+    font-family: "poppins";
+    box-shadow: 5px 0 0 #8258a0;
+    border-left: 2px solid #215966;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 2;
 }
 
-.menu_lateral ul li {
-    cursor: pointer;
-    transition: background .3s;
-    display: block;
-    padding: 10px 15px;
-    font-weight: 500;
-    font-size: 16px;
+.menu_lateral:hover {
+    width: 12%;
 }
 
-.menu_lateral ul li:hover {
-    background-color: #542377;
-    width: 190px;
-} */
-
-
-
-
-
-/* centro da pagina */
-/* .main_page {
-    display: flex;
-    flex-grow: 1;
-} */
-
-/* baner do jogo em destaque */
-/* .baner {
-    position: relative;
-    margin-top: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-left: -5%;
-} */
-
-/* .baner img {
-    width: 780px;
-    height: 280px;
-    border-radius: 30px;
-} */
-
-/* primeiro jogo */
-
-/* .card1 img {
-    border-radius: 30px;
-
-} */
-
-/* segundo jogo */
-/* .card2 {
-    margin-left: -55%;
-    margin-top: 5%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.card2 img {
-    border-radius: 30px;
-    width: 290px;
-    height: 190px;
-} */
-
-/* terceiro jogo */
-/* .card3 {
-    margin-left: -5%;
-    margin-top: -16%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
+.menu_lateral ul {
+    width: 100%;
+    padding-left: 9px;
+    padding-top: 40px;
 }
 
 .card3 img {
@@ -465,116 +423,9 @@ span {
     height: 190px;
 } */
 
-/* quarto jogo */
-/* .card4 {
-    margin-left: 45%;
-    margin-top: -16%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 
-}
-
-.card4 img {
-    border-radius: 30px;
-    width: 290px;
-    height: 190px;
-} */
-
-/* quinto jogo */
-/* .card5 {
-    margin-left: -55%;
-    margin-top: 5%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.card5 img {
-    border-radius: 30px;
-    width: 290px;
-    height: 190px;
-} */
-
-/* sexto jogo */
-/* .card6 {
-    margin-left: -5%;
-    margin-top: -16%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.card6 img {
-    border-radius: 30px;
-    width: 290px;
-    height: 190px;
-} */
-
-/* setimo jogo */
-/* .card7 {
-    margin-left: 45%;
-    margin-top: -16%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.card7 img {
-    border-radius: 30px;
-    width: 290px;
-    height: 190px;
-} */
-
-/* oitavo jogo */
-/* .card8 {
-    margin-left: -55%;
-    margin-top: 5%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.card8 img {
-    border-radius: 30px;
-    width: 290px;
-    height: 190px;
-} */
-
-/* nono jogo */
-/* .card9 {
-    margin-left: -5%;
-    margin-top: -16%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-} */
-
-/* .card9 img {
-    border-radius: 30px;
-    width: 290px;
-    height: 190px;
-} */
-
-/* decimo jogo */
-/* .card10 {
-    margin-left: 45%;
-    margin-top: -16%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.card10 img {
-    border-radius: 30px;
-    width: 290px;
-    height: 190px;
-} */
-
-/* botao para carregar mais jogos(NÃO HABILITADO) */
-
-/* .carregar {
-    font-family: 'poppins';
+.carregar {
+    font-family: "poppins";
     text-decoration: none;
     margin-top: 120px;
     margin-left: 520px;
@@ -583,160 +434,53 @@ span {
 .carregar a {
     text-decoration: none;
     color: white;
-} */
+}
+
 
 /* titulo dos jogos */
-/* .card1_text {
-    color: #00FF75;
-    font-family: 'poppins';
+
+.card1_text {
+    color: #00ff75;
+    font-family: "poppins";
     margin-top: 20px;
 }
 
 .main_page_div {
-    color: #00FF75;
-    font-family: 'poppins';
+    color: #00ff75;
+    font-family: "poppins";
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-} */
-
-/* @media only screen and (min-width: 850px) and (max-width: 1023px) {
-
-    .baner {
-        margin-top: 120%;
-        margin-left: -5%;
-    }
-
-    .baner img {
-        width: 480px;
-        height: 250px;
-    }
-
-    .card2 {
-        margin-top: 5%;
-        margin-left: -40%;
-    }
-
-    .card3 {
-        margin-top: -27.4%;
-        margin-left: 40%;
-
-    }
-
-    .card4 {
-        margin-top: 5%;
-        margin-left: -40%;
-    }
-
-    .card5 {
-        margin-top: -27.4%;
-        margin-left: 40%;
-    }
-
-    .card6 {
-        margin-top: 5%;
-        margin-left: -40%;
-    }
-
-    .card7 {
-        margin-top: -27.4%;
-        margin-left: 40%;
-    }
-
-    .card8 {
-        margin-top: 5%;
-        margin-left: -40%;
-    }
-
-    .card9 {
-        margin-top: -27.4%;
-        margin-left: 40%;
-    }
-
-    .card10 {
-        margin-top: 5%;
-        margin-left: -40%;
-    }
 }
 
-@media only screen and (max-width: 849px) {
-    .baner {
-        position: absolute;
-        margin-top: -20%;
-        margin-left: -40%;
-    }
+.card8 img {
+    border-radius: 30px;
+    width: 290px;
+    height: 190px;
+}
 
-    .baner img {
-        width: 290px;
-        height: 190px;
-    }
 
-    .card2 {
-        position: absolute;
-        margin-top: 50%;
-        margin-left: -40%;
-    }
-
-    .card3 {
-        position: absolute;
-        margin-top: 115%;
-        margin-left: -40%;
-    }
-
-    .card4 {
-        position: absolute;
-        margin-top: 185%;
-        margin-left: -40%;
-    }
-
-    .card5 {
-        position: absolute;
-        margin-top: 255%;
-        margin-left: -40%;
-    }
-
-    .card6 {
-        position: absolute;
-        margin-top: 325%;
-        margin-left: -40%;
-    }
-
-    .card7 {
-        position: absolute;
-        margin-top: 395%;
-        margin-left: -40%;
-    }
-
-    .card8 {
-        position: absolute;
-        margin-top: 465%;
-        margin-left: -40%;
-    }
-
-    .card9 {
-        position: absolute;
-        margin-top: 535%;
-        margin-left: -40%;
-    }
-
-    .card10 {
-        position: absolute;
-        margin-top: 605%;
-        margin-left: -40%;
-    }
-} */
-
-/* .baloes {
+.More {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-} */
-
-/* .paicentral {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-} */
+    /* margin-left: 8%; */
+    margin-top: 2%;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60%;
+    color: #90ee90;
+    font-family: "Poppins";
+    font-size: 11px;
+}
+
+.Favoritar {
+    position: absolute;
+    margin-top: 8.25%;
+    margin-right: 9.5%;
+}
